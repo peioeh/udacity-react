@@ -6,3 +6,5 @@ Clone the project from Github:
 Run `npm install` in the project root directory to install dependencies
 
 Run `npm start` to launch the project. 
+
+The URL is [http://localhost:3000/](http://localhost:3000/)

@@ -9,7 +9,7 @@ const Home = ({ users, authedUser, questions }) => {
   const answeredQuestionsIDs = Object.keys(user.answers);
 
   const sortedQuestions = Object.values(questions).sort(
-    (a, b) => a.timestamp - b.timestamp
+    (a, b) => b.timestamp - a.timestamp
   )
 
   const answeredQuestions = sortedQuestions.filter(question => answeredQuestionsIDs.includes(question.id));

@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import React, { useState } from 'react';
 
 import { setAuthedUser } from '../actions/authedUser';
 
 const Login = ({ users, dispatch }) => {
+  const location = useLocation();
 
   const [selectedUser, setSelectedUser] = useState('');
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Login = ({ users, dispatch }) => {
     if (selectedUser) {
       dispatch(setAuthedUser(selectedUser));
       console.log("authed user set to " + selectedUser);
-      navigate('/');
+      navigate(location);
     }
   };
 

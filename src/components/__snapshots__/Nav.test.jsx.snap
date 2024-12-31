@@ -17,7 +17,7 @@ exports[`nav_bar_snapshot_test 1`] = `
     </li>
     <li>
       <a
-        class="active"
+        class=""
         data-discover="true"
         href="/leaderboard"
       >
@@ -26,7 +26,7 @@ exports[`nav_bar_snapshot_test 1`] = `
     </li>
     <li>
       <a
-        class="active"
+        class=""
         data-discover="true"
         href="/add"
       >
@@ -40,7 +40,7 @@ exports[`nav_bar_snapshot_test 1`] = `
     </li>
     <li>
       <a
-        class="active"
+        class=""
         data-discover="true"
         href="/logout"
       >

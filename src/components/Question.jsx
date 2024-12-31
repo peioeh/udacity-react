@@ -5,7 +5,7 @@ const Question = ({ question }) => {
     const navigate = useNavigate();
     const toQuestionPage = (e, id) => {
         e.preventDefault();
-        navigate(`/question/${id}`);
+        navigate(`/questions/${id}`);
     };
     var timestamp = new Date(question.timestamp).toLocaleString(getUserLocale())
 

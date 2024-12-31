@@ -30,7 +30,7 @@ const App = (props) => {
               <Route path="/logout" exact element={<RequireAuth><Logout /></RequireAuth>} />
               <Route path="/leaderboard" exact element={<RequireAuth><LeaderBoard /></RequireAuth>} />
               <Route path="/add" exact element={<RequireAuth><NewPoll /></RequireAuth>} />
-              <Route path="/question/:id" element={<RequireAuth><QuestionPage /></RequireAuth>} />
+              <Route path="/questions/:id" element={<RequireAuth><QuestionPage /></RequireAuth>} />
             </Routes>
           )
         }

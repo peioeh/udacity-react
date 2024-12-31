@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav_bar_snapshot_test 1`] = `
+<nav
+  class="nav"
+>
+  <ul>
+    <li>
+      <a
+        aria-current="page"
+        class="active"
+        data-discover="true"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        class="active"
+        data-discover="true"
+        href="/leaderboard"
+      >
+        Leaderboard
+      </a>
+    </li>
+    <li>
+      <a
+        class="active"
+        data-discover="true"
+        href="/add"
+      >
+        New
+      </a>
+    </li>
+    <li
+      class="nav-right"
+    >
+      <div />
+    </li>
+    <li>
+      <a
+        class="active"
+        data-discover="true"
+        href="/logout"
+      >
+        Logout
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

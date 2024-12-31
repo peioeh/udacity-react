@@ -18,12 +18,36 @@ describe('_saveQuestion_expected_fields', () => {
   });
 });
 
-describe('_saveQuestion_incorrect_data', () => {
-  it('should return an error if incorrect data is passed', async () => {
+describe('_saveQuestion_incorrect_data_optionOneText', () => {
+  it('should return an error if optionOneText is missing', async () => {
     const question = {
       optionOneText: '',
       optionTwoText: 'Option Two',
       author: 'authorId'
+    };
+
+    await expect(_saveQuestion(question)).rejects.toEqual("Please provide optionOneText, optionTwoText, and author");
+  });
+});
+
+describe('_saveQuestion_incorrect_data_optionTwoText', () => {
+  it('should return an error if optionTwoText is missing', async () => {
+    const question = {
+      optionOneText: 'Option One',
+      optionTwoText: '',
+      author: 'authorId'
+    };
+
+    await expect(_saveQuestion(question)).rejects.toEqual("Please provide optionOneText, optionTwoText, and author");
+  });
+});
+
+describe('_saveQuestion_incorrect_data_author', () => {
+  it('should return an error if author is missing', async () => {
+    const question = {
+      optionOneText: 'Option One',
+      optionTwoText: 'Option Two',
+      author: ''
     };
 
     await expect(_saveQuestion(question)).rejects.toEqual("Please provide optionOneText, optionTwoText, and author");
@@ -51,8 +75,8 @@ describe('_saveQuestionAnswer_expected_fields', () => {
 
   });
 });
-describe('_saveQuestionAnswer_incorrect_data', () => {
-  it('should return an error if incorrect data is passed', async () => {
+describe('_saveQuestionAnswer_incorrect_data_authedUser', () => {
+  it('should return an error if authedUser is missing', async () => {
     const question_answer = {
       authedUser: '',
       qid: 'am8ehyc8byjqgar0jgpub9',
@@ -61,7 +85,9 @@ describe('_saveQuestionAnswer_incorrect_data', () => {
 
     await expect(_saveQuestionAnswer(question_answer)).rejects.toEqual("Please provide authedUser, qid, and answer");
   });
+});
 
+describe('_saveQuestionAnswer_incorrect_data_qid', () => {
   it('should return an error if qid is missing', async () => {
     const question_answer = {
       authedUser: 'peiol',
@@ -71,7 +97,9 @@ describe('_saveQuestionAnswer_incorrect_data', () => {
 
     await expect(_saveQuestionAnswer(question_answer)).rejects.toEqual("Please provide authedUser, qid, and answer");
   });
+});
 
+describe('_saveQuestionAnswer_incorrect_data_answer', () => {
   it('should return an error if answer is missing', async () => {
     const question_answer = {
       authedUser: 'peiol',
